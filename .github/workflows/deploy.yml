@@ -2,7 +2,11 @@ name: Get flag
 
 on:
   workflow_dispatch:  # Allows manual triggering
-
+    inputs:
+      deploy_only:
+        description: ' only deploy '
+        type: boolean
+        default: true
 # OIDC permissions for keyless authentication
 permissions:
   id-token: write
